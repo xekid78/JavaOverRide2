@@ -1,0 +1,2 @@
+# JavaSampleCode34
+オーバーライド
