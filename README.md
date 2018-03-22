@@ -2,11 +2,11 @@
 オーバーライド
 
 ## 処理
-Player2クラスのattackメソッドをWizardクラスでオーバーライドする。
+Player2クラスのattack()メソッドをWizardクラスでオーバーライドする。
 
 ## コード
 ```
-public class Sample34 {
+public class Override2 {
 
 	public static void main(String[] args) {
 		System.out.println("== パーティでスライムを攻撃 ==");
@@ -14,9 +14,9 @@ public class Sample34 {
 		Player2 hero = new Player2("勇者");
 		Player2 worrior = new Player2("戦士");
 		Wizard wizard = new Wizard("魔法使い");
-		Player2[] party = {hero,worrior,wizard};
+		Player2[] party = {hero, worrior, wizard};
 
-		for (Player2 member : party) {
+		for (Player2 member: party) {
 			member.attack("スライム");
 		}
 
@@ -59,5 +59,6 @@ class Wizard extends Player2 {
 ## 開発環境
 | 開発ツール |  |
 |:-|:-|
+| OS | Windows10 |
 | 統合開発環境(IDE) | Eclipse 4.7.0 Oxygen |
 | 開発言語 | Java8 |
