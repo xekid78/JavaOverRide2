@@ -2,12 +2,33 @@
 オーバーライド
 
 ## 処理
-Player2クラスの`attack()`メソッドを`Wizard()`クラスでオーバーライドする。
+`Player2()`クラスの`attack()`メソッドを`Wizard()`クラスでオーバーライドする。
 
 ## コード
 ```
-public class Override2 {
+class Player2 {
+	public String myName;
 
+	public Player2(String name) {
+		myName = name;
+	}
+
+	public void attack(String enemy) {
+		System.out.println(myName + "は、" + enemy + "を攻撃した！");
+	}
+}
+
+class Wizard extends Player2 {
+	public Wizard(String name) {
+		super(name);
+	}
+
+	public void attack(String enemy) {
+		System.out.println(myName + "は、" + enemy + "に炎を放った！");
+	}
+}
+
+public class Override2 {
 	public static void main(String[] args) {
 		System.out.println("== パーティでスライムを攻撃 ==");
 
@@ -19,31 +40,6 @@ public class Override2 {
 		for (Player2 member: party) {
 			member.attack("スライム");
 		}
-
-	}
-
-}
-
-class Player2 {
-	public String myName;
-
-	public Player2(String name) {
-		myName = name;
-	}
-
-	public void attack(String enemy) {
-		System.out.println(myName + "は、" + enemy + "を攻撃した！");
-	}
-
-}
-
-class Wizard extends Player2 {
-	public Wizard(String name) {
-		super(name);
-	}
-
-	public void attack(String enemy) {
-		System.out.println(myName + "は、" + enemy + "に炎を放った！");
 	}
 }
 ```
