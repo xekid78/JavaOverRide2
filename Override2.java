@@ -3,7 +3,6 @@
  * @author xekid78
  *
  */
-
 class Player2 {
 	public String myName;
 
@@ -14,7 +13,6 @@ class Player2 {
 	public void attack(String enemy) {
 		System.out.println(myName + "は、" + enemy + "を攻撃した！");
 	}
-
 }
 
 class Wizard extends Player2 {
@@ -28,7 +26,6 @@ class Wizard extends Player2 {
 }
 
 public class Override2 {
-
 	public static void main(String[] args) {
 		System.out.println("== パーティでスライムを攻撃 ==");
 
@@ -40,7 +37,5 @@ public class Override2 {
 		for (Player2 member: party) {
 			member.attack("スライム");
 		}
-
 	}
-
 }
